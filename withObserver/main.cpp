@@ -1,49 +1,50 @@
 #include "Player.hpp"
 #include "DragonsEventInformer.hpp"
 #include <iostream>
+#include <memory>
 
 int main()
 {
     std::cout << "FIRST STEP\n";
     DragonsEventInformer dragonsInformer;
-    Player* playerDragonSlayer = new Player("Nameless");
-    dragonsInformer.addListener(playerDragonSlayer);
+    std::shared_ptr<Player> playerDragonSlayer (new Player("Nameless"));
+    dragonsInformer.addListener(playerDragonSlayer.get());
     dragonsInformer.notifyListeners();
 
     std::cout << "SECOND STEP\n";
-    Player* playerWarrior = new Player("Conan");
-    dragonsInformer.addListener(playerWarrior);
+    std::shared_ptr<Player> playerWarrior (new Player("Conan"));
+    dragonsInformer.addListener(playerWarrior.get());
     dragonsInformer.notifyListeners();
 
     std::cout << "THIRD STEP\n";
-    Player* playerArcher = new Player("Legolas");
-    dragonsInformer.addListener(playerArcher);
+    std::shared_ptr<Player> playerArcher (new Player("Legolas"));
+    dragonsInformer.addListener(playerArcher.get());
     dragonsInformer.notifyListeners();
 
     std::cout << "FOURTH STEP\n";
-    dragonsInformer.removeListener(playerDragonSlayer);
+    dragonsInformer.removeListener(playerDragonSlayer.get());
     dragonsInformer.notifyListeners();
 
     std::cout << "FIFTH STEP\n";
-    dragonsInformer.removeListener(playerWarrior);
+    dragonsInformer.removeListener(playerWarrior.get());
     dragonsInformer.notifyListeners();
 
     std::cout << "SIXTH STEP\n";
-    dragonsInformer.removeListener(playerArcher);
+    dragonsInformer.removeListener(playerArcher.get());
     dragonsInformer.notifyListeners();
 
     std::cout << "SEVENTH STEP\n";
-    Player* playerMage = new Player("Gandalf");
-    Player* playerWitcher = new Player("Geralt");
-    Player* playerDwarf = new Player("Gimli");
-    dragonsInformer.addListener(playerMage);
-    dragonsInformer.addListener(playerWitcher);
-    dragonsInformer.addListener(playerDwarf);
+    std::shared_ptr<Player> playerMage (new Player("Gandalf"));
+    std::shared_ptr<Player> playerWitcher (new Player("Geralt"));
+    std::shared_ptr<Player> playerDwarf (new Player("Gimli"));
+    dragonsInformer.addListener(playerMage.get());
+    dragonsInformer.addListener(playerWitcher.get());
+    dragonsInformer.addListener(playerDwarf.get());
     dragonsInformer.notifyListeners();
     
     std::cout << "EIGHT STEP\n";
-    //dragonsInformer.removeListener(playerMage);
-    delete playerMage;
+    dragonsInformer.removeListener(playerMage.get());
+    playerMage.reset();
     dragonsInformer.notifyListeners();
 
     return 0;
