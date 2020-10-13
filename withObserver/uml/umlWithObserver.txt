@@ -42,4 +42,8 @@ class Player {
 
 IEventListener *-- Player
 
+
+IEventInformer <|-- IEventListener
+IEventListener <|-- IEventInformer
+
 @enduml
