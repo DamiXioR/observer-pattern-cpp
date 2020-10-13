@@ -9,8 +9,8 @@ void IEventInformer::addListener(IEventListener* listener)
                            });
     if (founded == eventListeners_.end()) {
         eventListeners_.emplace_back(listener);
+        listener->addInformer(this);
     }
-    listener->addInformer(this);
 }
 
 void IEventInformer::removeListener(IEventListener* listener)
