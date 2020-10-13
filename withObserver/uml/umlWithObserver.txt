@@ -1,0 +1,45 @@
+@startuml
+
+class IEventInformer {
+
+    +virtual void addListener(IEventListener* listener); (implementation)
+    +virtual void removeListener(IEventListener* listener); (implementation)
+    +virtual void notifyListeners(); (implementation)
+
+    #std::vector<IEventListener*> eventListeners_{};
+}
+
+class DarkElvesEventInformer {
+    +void notifyListeners(); (override)
+}
+
+class DragonsEventInformer {
+    +void notifyListeners(); (override)
+}
+
+IEventInformer *-- DarkElvesEventInformer
+IEventInformer *-- DragonsEventInformer
+
+
+class IEventListener {
+
+    +virtual ~IEventListener() = 0; (implementation)
+    +virtual void updateInformations() = 0;
+    +virtual void updateInformations(std::string informationContent) = 0;
+    +virtual void addInformer(IEventInformer* informer); (implementation)
+    +virtual void removeInformer(IEventInformer* informer); (implementation)
+
+    #std::vector<IEventInformer*> informer_;
+}
+
+class Player {
+    +Player(std::string name);
+    +void updateInformations(); (override)
+    +void updateInformations(std::string informationContent); (override)
+
+    -std::string name_{};
+}
+
+IEventListener *-- Player
+
+@enduml
