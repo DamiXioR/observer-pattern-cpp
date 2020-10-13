@@ -5,9 +5,9 @@
 
 class IEventInformer {
 public:
-    virtual void addListener(IEventListener* listener) = 0;
-    virtual void removeListener(IEventListener* listener) = 0;
-    virtual void notifyListeners() = 0;
+    virtual void addListener(IEventListener* listener);
+    virtual void removeListener(IEventListener* listener);
+    virtual void notifyListeners();
 
 protected:
     std::vector<IEventListener*> eventListeners_{};
