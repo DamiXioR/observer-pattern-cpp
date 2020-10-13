@@ -9,6 +9,6 @@ public:
     virtual void removeListener() = 0;
     virtual void notifyListeners() = 0;
 
-private:
+protected:
     std::vector<IEventListener*> eventListeners_{};
 };
