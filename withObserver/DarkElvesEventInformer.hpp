@@ -1,7 +1,7 @@
 #pragma once
 #include "IEventInformer.hpp"
 
-class DragonsEventInformer : public IEventInformer {
+class DarkElvesEventInformer : public IEventInformer {
 public:
     void notifyListeners();
 };

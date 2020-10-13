@@ -1,5 +1,6 @@
 #include "Player.hpp"
 #include "DragonsEventInformer.hpp"
+#include "DarkElvesEventInformer.hpp"
 #include <iostream>
 #include <memory>
 
@@ -7,6 +8,8 @@ int main()
 {
     std::cout << "FIRST STEP\n";
     DragonsEventInformer dragonsInformer;
+    DarkElvesEventInformer darkElvesInformer;
+
     std::shared_ptr<Player> playerDragonSlayer (new Player("Nameless"));
     dragonsInformer.addListener(playerDragonSlayer.get());
     dragonsInformer.notifyListeners();
@@ -27,11 +30,15 @@ int main()
 
     std::cout << "FIFTH STEP\n";
     dragonsInformer.removeListener(playerWarrior.get());
+    darkElvesInformer.addListener(playerWarrior.get());
     dragonsInformer.notifyListeners();
+    darkElvesInformer.notifyListeners();
 
     std::cout << "SIXTH STEP\n";
     dragonsInformer.removeListener(playerArcher.get());
+    dragonsInformer.addListener(playerWarrior.get());
     dragonsInformer.notifyListeners();
+    darkElvesInformer.notifyListeners();
 
     std::cout << "SEVENTH STEP\n";
     std::shared_ptr<Player> playerMage (new Player("Gandalf"));
@@ -40,7 +47,9 @@ int main()
     dragonsInformer.addListener(playerMage.get());
     dragonsInformer.addListener(playerWitcher.get());
     dragonsInformer.addListener(playerDwarf.get());
+    darkElvesInformer.removeListener(playerWarrior.get());
     dragonsInformer.notifyListeners();
+    darkElvesInformer.notifyListeners();
     
     std::cout << "EIGHT STEP\n";
     dragonsInformer.removeListener(playerMage.get());

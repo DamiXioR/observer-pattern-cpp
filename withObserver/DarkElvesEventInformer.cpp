@@ -1,11 +1,11 @@
-#include "DragonsEventInformer.hpp"
+#include "DarkElvesEventInformer.hpp"
 #include <algorithm>
 
-void DragonsEventInformer::notifyListeners()
+void DarkElvesEventInformer::notifyListeners()
 {
     if (!eventListeners_.empty()) {
         std::for_each(eventListeners_.begin(), eventListeners_.end(), [](IEventListener* everyListener) {
-            everyListener->updateInformations("a new dragons!");
+            everyListener->updateInformations("a new dark elves!");
         });
     }
 }
