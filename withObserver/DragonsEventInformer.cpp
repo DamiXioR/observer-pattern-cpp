@@ -8,18 +8,22 @@ void DragonsEventInformer::addListener(IEventListener* listener)
 
 void DragonsEventInformer::removeListener(IEventListener* listener)
 {
-    auto founded = find_if(eventListeners_.begin(), eventListeners_.end(),
-            [listener](IEventListener* everyListener) {
-                return everyListener == listener;
-            });
-    if (founded != eventListeners_.end()){
-        eventListeners_.erase(founded);
+    if (!eventListeners_.empty()) {
+        auto founded = find_if(eventListeners_.begin(), eventListeners_.end(),
+                               [listener](IEventListener* everyListener) {
+                                   return everyListener == listener;
+                               });
+        if (founded != eventListeners_.end()) {
+            eventListeners_.erase(founded);
+        }
     }
 }
 
 void DragonsEventInformer::notifyListeners()
 {
-    std::for_each(eventListeners_.begin(),eventListeners_.end(),[](IEventListener* everyListener){
-        everyListener->updateInformations();
-    });
+    if (!eventListeners_.empty()) {
+        std::for_each(eventListeners_.begin(), eventListeners_.end(), [](IEventListener* everyListener) {
+            everyListener->updateInformations();
+        });
+    }
 }
