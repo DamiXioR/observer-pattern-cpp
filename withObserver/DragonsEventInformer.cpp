@@ -19,4 +19,7 @@ void DragonsEventInformer::removeListener(IEventListener* listener)
 
 void DragonsEventInformer::notifyListeners()
 {
+    std::for_each(eventListeners_.begin(),eventListeners_.end(),[](IEventListener* everyListener){
+        everyListener->updateInformations();
+    });
 }
