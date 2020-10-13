@@ -56,6 +56,25 @@ int main()
     playerMage.reset();
     dragonsInformer.notifyListeners();
 
+    std::cout << "\nNINGHT STEP\n\n";
+    dragonsInformer.removeListener(playerMage.get());
+    darkElvesInformer.removeListener(playerWarrior.get());
+    darkElvesInformer.removeListener(playerWarrior.get());
+    playerWitcher.reset();
+    playerWitcher.reset();
+    playerWitcher.reset();
+    playerWarrior.reset();
+    playerWarrior.reset();
+    playerWarrior.reset();
+    darkElvesInformer.removeListener(playerDwarf.get());
+    darkElvesInformer.removeListener(playerDwarf.get());
+    darkElvesInformer.removeListener(playerDwarf.get());
+    dragonsInformer.addListener(playerDwarf.get());
+    dragonsInformer.addListener(playerDwarf.get());
+    dragonsInformer.addListener(playerDwarf.get());
+    dragonsInformer.addListener(playerDwarf.get());
+    dragonsInformer.notifyListeners();
+
     std::cout << "\nEND GAME\n\n";
 
     return 0;
