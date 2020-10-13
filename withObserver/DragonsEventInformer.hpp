@@ -3,7 +3,7 @@
 
 class DragonsEventInformer : public IEventInformer {
 public:
-    void addListener();
-    void removeListener();
+    void addListener(IEventListener* listener);
+    void removeListener(IEventListener* listener);
     void notifyListeners();
 };

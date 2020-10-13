@@ -5,8 +5,8 @@
 
 class IEventInformer {
 public:
-    virtual void addListener() = 0;
-    virtual void removeListener() = 0;
+    virtual void addListener(IEventListener* listener) = 0;
+    virtual void removeListener(IEventListener* listener) = 0;
     virtual void notifyListeners() = 0;
 
 protected:
