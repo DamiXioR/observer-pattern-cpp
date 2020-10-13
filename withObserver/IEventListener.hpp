@@ -10,6 +10,7 @@ public:
     virtual void updateInformations() = 0;
     virtual void updateInformations(std::string informationContent) = 0;
     virtual void addInformer(IEventInformer* informer);
+    virtual void removeInformer(IEventInformer* informer);
 
 protected:
     std::vector<IEventInformer*> informer_;

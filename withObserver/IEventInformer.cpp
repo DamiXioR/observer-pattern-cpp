@@ -22,6 +22,7 @@ void IEventInformer::removeListener(IEventListener* listener)
                                });
         if (founded != eventListeners_.end()) {
             eventListeners_.erase(founded);
+            listener->removeInformer(this);
         }
     }
 }
