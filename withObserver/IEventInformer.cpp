@@ -4,6 +4,7 @@
 void IEventInformer::addListener(IEventListener* listener)
 {
     eventListeners_.emplace_back(listener);
+    listener->addInformer(this);
 }
 
 void IEventInformer::removeListener(IEventListener* listener)
