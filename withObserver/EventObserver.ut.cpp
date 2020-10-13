@@ -7,7 +7,7 @@
 SCENARIO("","[Testing Observer Pattern]"){
     GIVEN("Dragon Event Informer and Player"){
         DragonsEventInformer dragonosInformer;
-        Player* playerDragonSlayer = new Player;
+        Player* playerDragonSlayer = new Player("Nameless");
         WHEN("Add player to Dragon Event Informer List"){
             dragonosInformer.addListener(playerDragonSlayer);
             THEN("Player should be notified"){
