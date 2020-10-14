@@ -6,10 +6,10 @@ Player::Player(std::string name)
 
 void Player::updateInformations()
 {
-    std::cout << name_ << " has a notice!\n";
+    std::cout << name_ << " get notice!\n";
 }
 
 void Player::updateInformations(std::string informationContent)
 {
-    std::cout << name_ << " has a notice about: " << informationContent << "\n";
+    std::cout << name_ << " get notice about: " << informationContent << "\n";
 }
