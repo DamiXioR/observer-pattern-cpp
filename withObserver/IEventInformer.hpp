@@ -5,6 +5,7 @@
 
 class IEventInformer {
 public:
+    virtual ~IEventInformer();
     virtual void addListener(IEventListener* listener);
     virtual void removeListener(IEventListener* listener);
     virtual void notifyListeners();

@@ -6,7 +6,7 @@ class IEventInformer;
 
 class IEventListener {
 public:
-    virtual ~IEventListener() = 0;
+    virtual ~IEventListener();
     virtual void updateInformations() = 0;
     virtual void updateInformations(std::string informationContent) = 0;
     virtual void addInformer(IEventInformer* informer);

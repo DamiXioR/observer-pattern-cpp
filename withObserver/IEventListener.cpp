@@ -5,9 +5,10 @@
 
 IEventListener::~IEventListener()
 {
-    for (auto el : informer_) {
-        el->removeListener(this);
-    }
+    std::for_each(informer_.begin(), informer_.end(),
+                  [this](IEventInformer* singleInformer) {
+                      singleInformer->removeListener(this);
+                  });
 }
 
 void IEventListener::addInformer(IEventInformer* informer)

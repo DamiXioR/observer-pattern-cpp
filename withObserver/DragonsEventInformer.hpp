@@ -3,5 +3,5 @@
 
 class DragonsEventInformer : public IEventInformer {
 public:
-    void notifyListeners();
+    void notifyListeners() override;
 };

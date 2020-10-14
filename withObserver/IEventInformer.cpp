@@ -1,6 +1,8 @@
 #include "IEventInformer.hpp"
 #include <algorithm>
 
+IEventInformer::~IEventInformer() {}
+
 void IEventInformer::addListener(IEventListener* listener)
 {
     auto founded = find_if(eventListeners_.begin(), eventListeners_.end(),
