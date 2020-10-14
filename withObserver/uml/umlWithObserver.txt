@@ -23,7 +23,7 @@ IEventInformer *-- DragonsEventInformer
 
 class IEventListener {
 
-    +virtual ~IEventListener() = 0; (implementation)
+    +virtual ~IEventListener(); (implementation)
     +virtual void updateInformations() = 0;
     +virtual void updateInformations(std::string informationContent) = 0;
     +virtual void addInformer(IEventInformer* informer); (implementation)
