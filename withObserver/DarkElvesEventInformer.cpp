@@ -5,7 +5,7 @@ void DarkElvesEventInformer::notifyListeners()
 {
     if (!eventListeners_.empty()) {
         std::for_each(eventListeners_.begin(), eventListeners_.end(), [](IEventListener* everyListener) {
-            everyListener->updateInformations("a new dark elves!");
+            everyListener->updateInformations("respawn of dark elves!");
         });
     }
 }

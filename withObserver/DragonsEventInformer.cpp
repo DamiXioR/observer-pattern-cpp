@@ -5,7 +5,7 @@ void DragonsEventInformer::notifyListeners()
 {
     if (!eventListeners_.empty()) {
         std::for_each(eventListeners_.begin(), eventListeners_.end(), [](IEventListener* everyListener) {
-            everyListener->updateInformations("a new dragons!");
+            everyListener->updateInformations("respawn of dragons!");
         });
     }
 }
