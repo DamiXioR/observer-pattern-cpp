@@ -14,10 +14,3 @@ void Player::updateInformations(std::string informationContent)
 {
     std::cout << name_ << " get notice about: " << informationContent << "\n";
 }
-
-void Player::addInformer()
-{
-}
-void Player::checkInformer()
-{
-}
