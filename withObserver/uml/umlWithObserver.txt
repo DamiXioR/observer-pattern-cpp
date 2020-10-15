@@ -17,8 +17,8 @@ class DragonsEventInformer {
     +void notifyListeners(); (override)
 }
 
-IEventInformer *-- DarkElvesEventInformer
-IEventInformer *-- DragonsEventInformer
+IEventInformer <|-- DarkElvesEventInformer
+IEventInformer <|-- DragonsEventInformer
 
 
 class IEventListener {
@@ -40,10 +40,9 @@ class Player {
     -std::string name_{};
 }
 
-IEventListener *-- Player
+IEventListener <|-- Player
 
 
-IEventInformer <|-- IEventListener
-IEventListener <|-- IEventInformer
+IEventInformer - IEventListener
 
 @enduml
