@@ -8,12 +8,29 @@
 int main()
 {
     std::cout << "\nFIRST STEP\n\n";
-    //DragonsEventInformer* dragonsInformer = new DragonsEventInformer();
-    //DarkElvesEventInformer* darkElvesInformer = new DarkElvesEventInformer();
+    DragonsEventInformer* dragonsInformer = new DragonsEventInformer();
+    DarkElvesEventInformer* darkElvesInformer = new DarkElvesEventInformer();
+
+    Player p1("Lord British");
+    p1.addInformer(dragonsInformer);
+    p1.addInformer(darkElvesInformer);
+
+    dragonsInformer->addNewEvent("Golden Dragon respawn!");
+
+    p1.checkInformer();
 
     std::cout << "\nSECOND STEP\n\n";
 
+    dragonsInformer->addNewEvent("Green Dragon respawn!");
+
+    p1.checkInformer();
+
     std::cout << "\nTHIRD STEP\n\n";
+
+    dragonsInformer->addNewEvent("Red Dragon respawn!");
+    darkElvesInformer->addNewEvent("Some Dark Elves Warriors respawn!");
+
+    p1.checkInformer();
 
     std::cout << "\nFOURTH STEP\n\n";
 
