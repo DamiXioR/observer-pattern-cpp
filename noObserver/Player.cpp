@@ -8,9 +8,11 @@ Player::Player(std::string name)
 void Player::updateInformations()
 {
     std::cout << name_ << " get notice!\n";
+    IEventListener::checkInformer();
 }
 
 void Player::updateInformations(std::string informationContent)
 {
     std::cout << name_ << " get notice about: " << informationContent << "\n";
+    IEventListener::checkInformer();
 }

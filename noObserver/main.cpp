@@ -34,6 +34,8 @@ int main()
 
     std::cout << "\nFOURTH STEP\n\n";
 
+    p1.updateInformations();
+
     std::cout << "\nFIFTH STEP\n\n";
 
     std::cout << "\nSIXTH STEP\n\n";
