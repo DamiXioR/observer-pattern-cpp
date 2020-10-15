@@ -1,4 +1,5 @@
 #include "Player.hpp"
+
 #include <iostream>
 
 Player::Player(std::string name)
@@ -12,4 +13,11 @@ void Player::updateInformations()
 void Player::updateInformations(std::string informationContent)
 {
     std::cout << name_ << " get notice about: " << informationContent << "\n";
+}
+
+void Player::addInformer()
+{
+}
+void Player::checkInformer()
+{
 }

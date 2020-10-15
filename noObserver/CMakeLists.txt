@@ -3,7 +3,7 @@ project(EventObserver VERSION 1.0 LANGUAGES CXX)
 
 set(MAIN main.cpp)
 set(TESTS EventObserver.ut.cpp)
-set(SOURCE IEventInformer.cpp DragonsEventInformer.cpp DarkElvesEventInformer.cpp Player.cpp)
+set(SOURCE IEventInformer.cpp DragonsEventInformer.cpp DarkElvesEventInformer.cpp IEventListener.cpp Player.cpp)
 set(COMPILE_FLAGS -Wall -Wextra -Werror -Wconversion -pedantic -O3)
 
 set(CMAKE_BUILD_TYPE Debug)

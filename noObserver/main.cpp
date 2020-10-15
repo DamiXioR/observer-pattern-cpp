@@ -1,12 +1,15 @@
-#include <iostream>
-#include <memory>
 #include "DarkElvesEventInformer.hpp"
 #include "DragonsEventInformer.hpp"
 #include "Player.hpp"
 
+#include <iostream>
+#include <memory>
+
 int main()
 {
     std::cout << "\nFIRST STEP\n\n";
+    //DragonsEventInformer* dragonsInformer = new DragonsEventInformer();
+    //DarkElvesEventInformer* darkElvesInformer = new DarkElvesEventInformer();
 
     std::cout << "\nSECOND STEP\n\n";
 

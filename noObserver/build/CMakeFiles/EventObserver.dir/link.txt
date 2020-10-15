@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/EventObserver.dir/main.cpp.o CMakeFiles/EventObserver.dir/IEventInformer.cpp.o CMakeFiles/EventObserver.dir/DragonsEventInformer.cpp.o CMakeFiles/EventObserver.dir/DarkElvesEventInformer.cpp.o CMakeFiles/EventObserver.dir/Player.cpp.o  -o EventObserver 
