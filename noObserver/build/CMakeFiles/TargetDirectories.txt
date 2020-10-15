@@ -1,0 +1,5 @@
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/build/CMakeFiles/rebuild_cache.dir
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/build/CMakeFiles/edit_cache.dir
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/build/CMakeFiles/test.dir
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/build/CMakeFiles/EventObserver-ut.dir
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/build/CMakeFiles/EventObserver.dir

@@ -1,0 +1,50 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/DarkElvesEventInformer.hpp
+IEventInformer.hpp
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/IEventInformer.hpp
+
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/DragonsEventInformer.hpp
+IEventInformer.hpp
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/IEventInformer.hpp
+
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/IEventInformer.hpp
+string
+-
+vector
+-
+
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/IEventListener.hpp
+vector
+-
+
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/Player.cpp
+Player.hpp
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/Player.hpp
+iostream
+-
+
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/Player.hpp
+string
+-
+IEventListener.hpp
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/IEventListener.hpp
+
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/main.cpp
+iostream
+-
+memory
+-
+DarkElvesEventInformer.hpp
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/DarkElvesEventInformer.hpp
+DragonsEventInformer.hpp
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/DragonsEventInformer.hpp
+Player.hpp
+/home/damian/Pulpit/Kurs Coders School/ObserverHomeworkPatterns/noObserver/Player.hpp
+
