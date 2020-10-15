@@ -6,7 +6,7 @@
 class IEventInformer {
 public:
     virtual ~IEventInformer(){};
-    virtual void addNewEvent();
+    virtual void addNewEvent(std::string incomingEvent);
     virtual std::vector<std::string>& getEvents();
 
 protected:
