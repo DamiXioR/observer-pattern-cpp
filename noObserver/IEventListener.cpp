@@ -10,7 +10,7 @@ void IEventListener::addInformer(IEventInformer* eventInformer)
                                     [eventInformer](IEventInformer* singleEventInformer) {
                                         return singleEventInformer == eventInformer;
                                     });
-        if (founded != eventInformers_.end()) {
+        if (founded == eventInformers_.end()) {
             eventInformers_.emplace_back(eventInformer);
         }
     }
