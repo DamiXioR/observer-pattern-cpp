@@ -6,7 +6,6 @@ IEventInformer::~IEventInformer() {}
 void IEventInformer::addListener(IEventListener* listener)
 {
     auto founded = find(eventListeners_.begin(), eventListeners_.end(), listener);
-
     if (founded == eventListeners_.end()) {
         eventListeners_.emplace_back(listener);
         listener->addInformer(this);
