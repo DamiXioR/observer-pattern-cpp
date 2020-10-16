@@ -5,10 +5,8 @@ IEventInformer::~IEventInformer() {}
 
 void IEventInformer::addListener(IEventListener* listener)
 {
-    auto founded = find_if(eventListeners_.begin(), eventListeners_.end(),
-                           [listener](IEventListener* everyListener) {
-                               return everyListener == listener;
-                           });
+    auto founded = find(eventListeners_.begin(), eventListeners_.end(), listener);
+
     if (founded == eventListeners_.end()) {
         eventListeners_.emplace_back(listener);
         listener->addInformer(this);
@@ -18,10 +16,7 @@ void IEventInformer::addListener(IEventListener* listener)
 void IEventInformer::removeListener(IEventListener* listener)
 {
     if (!eventListeners_.empty()) {
-        auto founded = find_if(eventListeners_.begin(), eventListeners_.end(),
-                               [listener](IEventListener* everyListener) {
-                                   return everyListener == listener;
-                               });
+        auto founded = find(eventListeners_.begin(), eventListeners_.end(), listener);
         if (founded != eventListeners_.end()) {
             eventListeners_.erase(founded);
             listener->removeInformer(this);
