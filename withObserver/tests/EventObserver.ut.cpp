@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include "mocks/MockDarkElvesEventInformer.hpp"
 #include "mocks/MockDragonsEventInformer.hpp"
+#include "mocks/MockPlayer.hpp"
 
 using namespace ::testing;
 
