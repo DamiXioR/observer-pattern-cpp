@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include "../DragonsEventInformer.hpp"
 #include "mocks/MockDarkElvesEventInformer.hpp"
 #include "mocks/MockDragonsEventInformer.hpp"
 #include "mocks/MockPlayer.hpp"
@@ -9,6 +10,9 @@ struct DarkElvesEventInformerTest : public ::testing::Test {
 };
 
 struct DragonsEventInformerTest : public ::testing::Test {
+};
+
+struct PlayerTest : public ::testing::Test {
 };
 
 TEST_F(DarkElvesEventInformerTest, shouldNoticeListeners)
@@ -29,4 +33,19 @@ TEST_F(DragonsEventInformerTest, shouldNoticeListeners)
     mDragonsInfo->notifyListeners();
 
     delete mDragonsInfo;
+}
+
+TEST_F(PlayerTest, shouldNoticeOnlyRegisterPlayers)
+{
+    DragonsEventInformer* dragonsInfo = new DragonsEventInformer();
+    MockPlayer* mDoomSlayer = new MockPlayer("Doom");
+    dragonsInfo->addListener(mDoomSlayer);
+
+    EXPECT_CALL(*mDoomSlayer, updateInformations("respawn of dragons!"));
+
+    dragonsInfo->notifyListeners();
+    dragonsInfo->removeListener(mDoomSlayer);
+
+    delete dragonsInfo;
+    delete mDoomSlayer;
 }
