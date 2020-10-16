@@ -4,7 +4,7 @@
 
 class Player : public IEventListener {
 public:
-    Player(std::string name);
+    explicit Player(std::string name);
     void updateInformations() override;
     void updateInformations(std::string informationContent) override;
 
