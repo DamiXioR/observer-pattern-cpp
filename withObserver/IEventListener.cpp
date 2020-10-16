@@ -19,10 +19,7 @@ void IEventListener::addInformer(IEventInformer* informer)
 void IEventListener::removeInformer(IEventInformer* informer)
 {
     if (!informer_.empty()) {
-        auto founded = find_if(informer_.begin(), informer_.end(),
-                               [informer](IEventInformer* everyInformer) {
-                                   return everyInformer == informer;
-                               });
+        auto founded = find(informer_.begin(), informer_.end(), informer);
         if (founded != informer_.end()) {
             informer_.erase(founded);
         }
