@@ -46,6 +46,6 @@ TEST_F(PlayerTest, shouldNoticeOnlyRegisterPlayers)
     dragonsInfo->notifyListeners();
     dragonsInfo->removeListener(mDoomSlayer);
 
-    delete dragonsInfo;
     delete mDoomSlayer;
+    delete dragonsInfo;
 }
