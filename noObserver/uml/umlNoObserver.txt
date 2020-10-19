@@ -25,7 +25,7 @@ class IEventListener {
     +virtual void addInformer(IEventInformer* eventInformer); (implementation)
     +virtual void checkInformer(); (implementation)
 
-    #IEventInformer* eventInformers_{};
+    #std::vector<IEventInformer*> eventInformers_;
 }
 
 class Player {
